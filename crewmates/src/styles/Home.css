@@ -1,0 +1,356 @@
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: clamp(40px, 8vw, 60px) clamp(20px, 5vw, 40px);
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: clamp(30px, 6vw, 50px);
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.2);
+}
+
+.hero-section h1 {
+  font-size: clamp(1.75rem, 8vw, 3rem);
+  margin: clamp(15px, 3vw, 25px) 0 clamp(15px, 2vw, 20px) 0;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  margin: 0;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+/* Gallery Preview */
+.gallery-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(20px, 4vw, 30px);
+  margin-bottom: clamp(30px, 6vw, 50px);
+}
+
+.image-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.image-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.hero-image {
+  width: 100%;
+  height: clamp(200px, 40vw, 400px);
+  object-fit: cover;
+  display: block;
+}
+
+.image-card h3 {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  margin: clamp(15px, 3vw, 20px) clamp(15px, 3vw, 20px) clamp(10px, 2vw, 15px);
+  color: #08060d;
+}
+
+.image-card p {
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  color: #6b6375;
+  padding: 0 clamp(15px, 3vw, 20px) clamp(15px, 3vw, 20px);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(to right, #667eea, #764ba2);
+  background-size: 200% 200%;
+  color: white;
+  padding: clamp(40px, 8vw, 60px) clamp(20px, 5vw, 40px);
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.2);
+}
+
+.cta-section h2 {
+  font-size: clamp(1.5rem, 6vw, 2.5rem);
+  margin: 0 0 clamp(10px, 2vw, 15px) 0;
+  color: white;
+  font-weight: 700;
+}
+
+.cta-section p {
+  font-size: clamp(0.95rem, 3vw, 1.1rem);
+  margin: 0 0 clamp(25px, 4vw, 35px) 0;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.button-group {
+  display: flex;
+  gap: clamp(15px, 3vw, 25px);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: clamp(12px, 2.5vw, 16px) clamp(25px, 5vw, 40px);
+  font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: white;
+  color: #667eea;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  background-color: #f0f0f0;
+}
+
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .hero-section {
+    padding: clamp(30px, 6vw, 45px) clamp(18px, 4vw, 30px);
+    margin-bottom: clamp(25px, 5vw, 40px);
+  }
+
+  .gallery-preview {
+    gap: clamp(15px, 3vw, 25px);
+    margin-bottom: clamp(25px, 5vw, 40px);
+  }
+
+  .cta-section {
+    padding: clamp(30px, 6vw, 45px) clamp(18px, 4vw, 30px);
+  }
+}
+
+/* Large phones (landscape tablets) */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: clamp(25px, 5vw, 35px) clamp(15px, 3vw, 25px);
+    margin-bottom: clamp(20px, 4vw, 35px);
+  }
+
+  .hero-section h1 {
+    margin: clamp(12px, 2vw, 18px) 0 clamp(12px, 1.5vw, 15px) 0;
+  }
+
+  .gallery-preview {
+    grid-template-columns: 1fr;
+    gap: clamp(15px, 3vw, 20px);
+    margin-bottom: clamp(25px, 4vw, 35px);
+  }
+
+  .hero-image {
+    height: clamp(200px, 60vw, 300px);
+  }
+
+  .image-card h3 {
+    margin: clamp(12px, 2vw, 15px) clamp(12px, 2vw, 15px) clamp(8px, 1.5vw, 10px);
+  }
+
+  .image-card p {
+    padding: 0 clamp(12px, 2vw, 15px) clamp(12px, 2vw, 15px);
+  }
+
+  .cta-section {
+    padding: clamp(25px, 5vw, 35px) clamp(15px, 3vw, 25px);
+  }
+
+  .button-group {
+    gap: clamp(10px, 2vw, 15px);
+  }
+}
+
+/* Medium phones */
+@media (max-width: 600px) {
+  .hero-section {
+    padding: 20px 15px;
+    margin-bottom: 25px;
+  }
+
+  .hero-section h1 {
+    font-size: 1.75rem;
+    margin: 10px 0;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .gallery-preview {
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+
+  .hero-image {
+    height: 220px;
+  }
+
+  .image-card h3 {
+    font-size: 1.2rem;
+    margin: 12px;
+  }
+
+  .image-card p {
+    font-size: 0.9rem;
+    padding: 0 12px 12px;
+  }
+
+  .cta-section {
+    padding: 25px 15px;
+  }
+
+  .cta-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .button-group {
+    gap: 10px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 18px 12px;
+    margin-bottom: 20px;
+  }
+
+  .hero-section h1 {
+    font-size: 1.5rem;
+    margin: 8px 0;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .gallery-preview {
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .hero-image {
+    height: 180px;
+  }
+
+  .image-card h3 {
+    font-size: 1.1rem;
+    margin: 10px;
+  }
+
+  .image-card p {
+    font-size: 0.85rem;
+    padding: 0 10px 10px;
+  }
+
+  .cta-section {
+    padding: 20px 12px;
+  }
+
+  .cta-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+
+  .cta-section p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .button-group {
+    gap: 8px;
+    flex-direction: column;
+  }
+
+  .btn {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 360px) {
+  .hero-section {
+    padding: 15px 10px;
+    margin-bottom: 15px;
+  }
+
+  .hero-section h1 {
+    font-size: 1.3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .gallery-preview {
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .hero-image {
+    height: 150px;
+  }
+
+  .cta-section {
+    padding: 15px 10px;
+  }
+
+  .cta-section h2 {
+    font-size: 1.1rem;
+  }
+
+  .cta-section p {
+    font-size: 0.8rem;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+}

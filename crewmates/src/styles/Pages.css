@@ -1,0 +1,368 @@
+/* Gallery Page Styles */
+.gallery-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: clamp(30px, 5vw, 50px);
+}
+
+.gallery-header h1 {
+  font-size: clamp(1.75rem, 7vw, 2.75rem);
+  color: #08060d;
+  margin: clamp(15px, 3vw, 25px) 0;
+  font-weight: 700;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: clamp(20px, 3vw, 30px);
+  margin-bottom: clamp(30px, 5vw, 50px);
+}
+
+.gallery-item {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gallery-item-content {
+  padding: clamp(15px, 2vw, 20px);
+}
+
+.gallery-item-title {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-weight: 600;
+  color: #08060d;
+  margin: 0 0 8px 0;
+}
+
+.gallery-item-desc {
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
+  color: #6b6375;
+  margin: 0;
+}
+
+.edit-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: clamp(8px, 1.5vw, 10px) clamp(16px, 3vw, 20px);
+  border: none;
+  border-radius: 6px;
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.edit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.edit-btn:active {
+  transform: translateY(0);
+}
+
+/* Create Page Styles */
+.create-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.create-header {
+  text-align: center;
+  margin-bottom: clamp(30px, 5vw, 40px);
+}
+
+.create-header h1 {
+  font-size: clamp(1.75rem, 7vw, 2.5rem);
+  color: #08060d;
+  margin: clamp(15px, 3vw, 25px) 0;
+  font-weight: 700;
+}
+
+.form-section {
+  background: white;
+  padding: clamp(25px, 5vw, 40px);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: clamp(20px, 3vw, 30px);
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: #08060d;
+  margin-bottom: clamp(8px, 1.5vw, 12px);
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: clamp(10px, 2vw, 14px);
+  border: 2px solid #e5e4e7;
+  border-radius: 8px;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  font-family: var(--sans);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: clamp(100px, 20vw, 150px);
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: clamp(12px, 2.5vw, 16px) clamp(30px, 6vw, 50px);
+  border: none;
+  border-radius: 8px;
+  font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: clamp(15px, 2.5vw, 25px);
+  }
+
+  .gallery-item-image {
+    height: 220px;
+  }
+
+  .form-section {
+    padding: clamp(20px, 4vw, 30px);
+  }
+}
+
+/* Large phones (landscape tablets) */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: clamp(12px, 2vw, 20px);
+  }
+
+  .gallery-item-image {
+    height: 200px;
+  }
+
+  .gallery-item-title {
+    font-size: 1rem;
+  }
+
+  .create-container {
+    max-width: 100%;
+  }
+
+  .form-section {
+    padding: clamp(15px, 3vw, 25px);
+  }
+
+  .form-group {
+    margin-bottom: clamp(15px, 2.5vw, 25px);
+  }
+
+  .submit-btn {
+    padding: clamp(10px, 2vw, 14px) clamp(25px, 4vw, 40px);
+  }
+}
+
+/* Medium phones */
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+  }
+
+  .gallery-item-image {
+    height: 150px;
+  }
+
+  .gallery-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .gallery-item-title {
+    font-size: 0.9rem;
+  }
+
+  .gallery-item-desc {
+    font-size: 0.8rem;
+  }
+
+  .create-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .form-section {
+    padding: 15px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .submit-btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 8px;
+  }
+
+  .gallery-item-image {
+    height: 130px;
+  }
+
+  .gallery-header h1 {
+    font-size: 1.3rem;
+    margin: 12px 0;
+  }
+
+  .gallery-item-title {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+  }
+
+  .gallery-item-desc {
+    font-size: 0.75rem;
+  }
+
+  .gallery-item-content {
+    padding: 10px;
+  }
+
+  .create-header h1 {
+    font-size: 1.3rem;
+    margin: 12px 0;
+  }
+
+  .form-section {
+    padding: 12px;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .form-group label {
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .submit-btn {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 360px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 6px;
+  }
+
+  .gallery-item-image {
+    height: 100px;
+  }
+
+  .gallery-header h1 {
+    font-size: 1.1rem;
+  }
+
+  .gallery-item-title {
+    font-size: 0.8rem;
+  }
+
+  .gallery-item-desc {
+    font-size: 0.7rem;
+  }
+
+  .gallery-item-content {
+    padding: 8px;
+  }
+
+  .create-header h1 {
+    font-size: 1.1rem;
+  }
+
+  .form-section {
+    padding: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+  }
+
+  .submit-btn {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+}

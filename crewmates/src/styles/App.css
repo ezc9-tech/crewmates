@@ -1,0 +1,64 @@
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  flex-direction: row;
+  background-color: #f8f9fa;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 280px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: clamp(20px, 5vw, 40px);
+  width: 100%;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .app-container {
+    flex-direction: row;
+  }
+
+  .main-content {
+    margin-left: 240px;
+    padding: clamp(18px, 4vw, 35px);
+  }
+}
+
+/* Large phones (landscape tablets) */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .main-content {
+    margin-left: 0;
+    margin-top: 0;
+    width: 100%;
+    padding: clamp(15px, 3vw, 25px);
+    min-height: auto;
+  }
+}
+
+/* Medium phones */
+@media (max-width: 600px) {
+  .main-content {
+    padding: clamp(12px, 2.5vw, 20px);
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .main-content {
+    padding: clamp(10px, 2vw, 15px);
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 360px) {
+  .main-content {
+    padding: 8px;
+  }
+}

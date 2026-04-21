@@ -1,0 +1,200 @@
+.sidebar {
+  width: 280px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 0;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.15);
+  overflow-y: auto;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  padding: 30px 20px;
+  text-align: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header h1 {
+  color: white;
+  margin: 0;
+  font-size: clamp(1.25rem, 5vw, 28px);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 20px 0;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-link {
+  display: block;
+  padding: 16px 20px;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: clamp(0.9rem, 3vw, 16px);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+  position: relative;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-left-color: white;
+  color: white;
+  padding-left: 24px;
+}
+
+.nav-link:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 240px;
+  }
+
+  .sidebar-header {
+    padding: 25px 15px;
+  }
+
+  .sidebar-header h1 {
+    font-size: 24px;
+  }
+
+  .nav-links {
+    padding: 15px 0;
+    gap: 3px;
+  }
+
+  .nav-link {
+    padding: 14px 18px;
+    font-size: 15px;
+  }
+}
+
+/* Large phones (landscape tablets) */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    padding: 0;
+    justify-content: space-between;
+    flex-direction: row;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .sidebar-header {
+    border-bottom: none;
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 0;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+  }
+
+  .sidebar-header h1 {
+    font-size: clamp(1rem, 4vw, 20px);
+    margin: 0;
+  }
+
+  .nav-links {
+    display: flex;
+    flex: 1;
+    gap: 0;
+    padding: 0;
+    flex-direction: row;
+  }
+
+  .nav-links li {
+    flex: 1;
+  }
+
+  .nav-link {
+    padding: 12px 10px;
+    border-left: none;
+    border-bottom: 4px solid transparent;
+    text-align: center;
+    font-size: clamp(0.8rem, 2.5vw, 14px);
+    margin: 0;
+  }
+
+  .nav-link:hover {
+    border-bottom-color: rgba(255, 255, 255, 0.8);
+    border-left: none;
+    padding-left: 10px;
+  }
+}
+
+/* Medium phones */
+@media (max-width: 600px) {
+  .sidebar-header {
+    min-width: 120px;
+    padding: 10px 15px;
+  }
+
+  .sidebar-header h1 {
+    font-size: 18px;
+  }
+
+  .nav-link {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .sidebar-header {
+    min-width: 100px;
+    padding: 8px 12px;
+  }
+
+  .sidebar-header h1 {
+    font-size: 16px;
+  }
+
+  .nav-link {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 360px) {
+  .sidebar-header {
+    min-width: 90px;
+    padding: 6px 10px;
+  }
+
+  .sidebar-header h1 {
+    font-size: 14px;
+  }
+
+  .nav-link {
+    padding: 6px 4px;
+    font-size: 11px;
+  }
+}
